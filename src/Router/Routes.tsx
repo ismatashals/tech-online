@@ -6,11 +6,12 @@ interface route {
     path: string
     component: JSX.Element | JSX.Element[] | string | string[]
     layout: "main" | "default" | "no-layout"
+    container: boolean
 }
 
 
 const r: route[] = [
-    {path: "/", component: <HomePage />, layout: "main"}
+    {path: "/", component: <HomePage />, layout: "main", container: true}
 ]
 
 const Routes = () => {
@@ -18,7 +19,7 @@ const Routes = () => {
         <AppRoutes>
             {r.map(route => (
                 <Route
-                    element={<RouterElement component={route.component} layout={route.layout} />}
+                    element={<RouterElement component={route.component} layout={route.layout} container={route.container} />}
                     path={route.path}
                     key={route.path}
                 />

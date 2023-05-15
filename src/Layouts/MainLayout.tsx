@@ -4,16 +4,26 @@ import Footer from "./components/Footer";
 
 interface Props {
     children: JSX.Element | JSX.Element[] | string | string[]
+    container: boolean
 }
 
-const MainLayout = ({children}: Props) => {
+const MainLayout = ({children, container}: Props) => {
+
     return (
-        <Box>
+        <>
             <Header />
-            {children}
+            <Box sx={container ? containerSx : null}>
+                {children}
+            </Box>
             <Footer />
-        </Box>
+        </>
     );
 }
- 
+
+const containerSx = {
+    maxWidth: 1430,
+    margin: "0 auto",
+    padding: "0 15px"
+}
+
 export default MainLayout;
