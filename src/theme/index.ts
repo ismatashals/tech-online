@@ -15,6 +15,19 @@ const theme = (mode: PaletteMode) => {
                     },
                 },
             },
+            MuiButton: {
+                styleOverrides: {
+                    root: {
+                        borderRadius: "50px",
+                        "&.MuiButton-outlined": {
+                            borderWidth: "2px",
+                        }
+                    },
+                },
+                defaultProps: {
+                    variant: "outlined"
+                }
+            }
         },
         typography: typography,
         palette: palette(mode),

@@ -1,27 +1,27 @@
 export default {
     fontFamily: ["Gotham Pro", "sans-serif"].join(","),
     h1: {
-        fontSize: 16,
+        fontSize: 24,
         lineHeight: 1.5,
-        fontWeight: 500,
+        fontWeight: 600,
         fontStyle: "normal",
     },
     h2: {
-        fontSize: 16,
+        fontSize: 22,
         lineHeight: 1.5,
-        fontWeight: 500,
+        fontWeight: 600,
         fontStyle: "normal",
     },
     h3: {
-        fontSize: 16,
+        fontSize: 20,
         lineHeight: 1.5,
-        fontWeight: 500,
+        fontWeight: 600,
         fontStyle: "normal",
     },
     body1: {
-        fontSize: 16,
+        fontSize: 18,
         lineHeight: 1.5,
-        fontWeight: 500,
+        fontWeight: 600,
         fontStyle: "normal",
     },
     body2: {
@@ -31,7 +31,7 @@ export default {
         fontStyle: "normal",
     },
     button: {
-        fontSize: 18,
+        fontSize: 14,
         textTransform: "capitalize" as const,
         ":focus": {
             outline: "none"
